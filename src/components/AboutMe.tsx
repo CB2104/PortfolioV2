@@ -1,9 +1,17 @@
 import { ExternalLink } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { motion } from "framer-motion";
 
 function AboutMe() {
   return (
-    <div className="py-20 border-t-4 border-double border-border" id="about">
+    <motion.div
+      className="py-20 border-t-4 border-double border-border"
+      id="about"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <section className="min-h-screen  px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -167,7 +175,7 @@ function AboutMe() {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

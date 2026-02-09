@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 
@@ -41,7 +42,13 @@ function ContactForm() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-6">
               <article className="border-4 border-black bg-white dark:bg-background dark:border-accent ">
@@ -209,7 +216,7 @@ function ContactForm() {
                 </form>
               </article>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
