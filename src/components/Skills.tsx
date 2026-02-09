@@ -55,7 +55,7 @@ const skills = [
     institution: "En línea — Argentina",
     period: "2021 - 2022",
     description:
-      "Estudié principios de diseño centrado en el usuario, prototipado y sistemas de diseño. Competente en Figma, Adobe XD y herramientas modernas de diseño.",
+      "Estudié principios de diseño centrado en el usuario, prototipado y sistemas de diseño. Competente en Figma, Photoshop y herramientas modernas de diseño.",
     highlights: [
       "User Research",
       "Prototipado",

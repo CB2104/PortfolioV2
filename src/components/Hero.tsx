@@ -71,7 +71,7 @@ const Hero = () => {
                   <div className="text-center text-muted-foreground">
                     <div className="aspect-3/4 relative">
                       <ImageWithFallback
-                        src="/public/Me.jpg"
+                        src="/Me.jpg"
                         alt="me"
                         className="w-full h-full object-cover"
                       />

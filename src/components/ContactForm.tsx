@@ -47,7 +47,7 @@ function ContactForm() {
               <article className="border-4 border-black bg-white dark:bg-background dark:border-accent ">
                 <div className="border-b-2 border-black p-4 bg-black text-white dark:border-accent dark:bg-accent dark:text-accent-foreground">
                   <h3 className="font-serif uppercase text-sm tracking-wider">
-                    Contact Information
+                    Información de Contacto
                   </h3>
                 </div>
                 <div className="p-6 space-y-4">
@@ -115,9 +115,9 @@ function ContactForm() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <article className="border-4 border-black bg-white dark:border-accent dark:bg-accent-foreground">
-                <div className="border-b-2 border-black p-4 bg-white dark:border-accent dark:bg-accent">
+                <div className="border-b-2 border-black p-4 bg-black text-white dark:border-accent dark:bg-accent dark:text-accent-foreground">
                   <h3 className="font-serif text-xl uppercase tracking-wide">
-                    Enviar un Mensaje
+                    Enviame tu Mensaje
                   </h3>
                 </div>
                 <form onSubmit={handleSubmit} className="p-6 space-y-6">
@@ -136,7 +136,7 @@ function ContactForm() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-black dark:bg-ring focus:outline-none focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
+                        className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black dark:bg-ring focus:outline-none focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
                         placeholder="Nombre Completo"
                       />
                     </div>
@@ -155,7 +155,7 @@ function ContactForm() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
+                        className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
                         placeholder="nombre@google.com"
                       />
                     </div>
@@ -175,7 +175,7 @@ function ContactForm() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
+                      className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
                       placeholder="Consulta de proyecto"
                     />
                   </div>
@@ -194,7 +194,7 @@ function ContactForm() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border-2 border-black focus:outline-none focus:ring-2 focus:ring-black font-mono resize-none dark:bg-ring dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
+                      className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none focus:ring-2 focus:ring-black font-mono resize-none dark:bg-ring dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
                       placeholder="Cuéntame sobre tu proyecto..."
                     />
                   </div>

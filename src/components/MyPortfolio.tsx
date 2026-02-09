@@ -12,9 +12,10 @@ const technologies = [
   "Tailwind CSS",
   "HTML",
   "CSS",
-  'API',
+  "API",
   "IA API",
   "FullStack",
+  "SPA",
 ];
 
 const projects = [
@@ -22,55 +23,75 @@ const projects = [
     id: 1,
     title: "Plataforma E-Commerce",
     description:
-      "A full-featured online store with cart functionality, user authentication, and payment integration.",
-    image: "/placeholder.svg",
-    tags: ["React", "TypeScript", "Tailwind CSS", 'FullStack'],
-    category: "Web Application",
+      "Plataforma e-commerce con roles de usuario, filtrado avanzado y backend en la nube con gestión de estado global.",
+    image: "/TesloShop.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "FullStack", "Auth"],
+    category: "Web Application · E-commerce",
+    demo: `https://tesloshop-practice.netlify.app`,
+    github: "https://github.com/CB2104/tesloShop",
   },
   {
     id: 2,
-    title: "Fitness Tracker",
+    title: "Fitness Tracker AI",
     description:
-      "Collaborative project management tool with real-time updates and team features.",
-    image: "/placeholder.svg",
-    tags: ["React", "JavaScript", "CSS", 'IA API', 'FullStack'],
-    category: "Productivity",
+      "App full-stack de seguimiento calórico con autenticación segura y asistencia mediante IA para objetivos físicos personalizados.",
+    image: "/FitnessTrack.png",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "IA API",
+      "FullStack",
+      "SPA",
+      "Auth",
+    ],
+    category: "Web Application · HealthTech",
+    demo: "https://fitness-tracker-prototype.vercel.app",
+    github: "https://github.com/CB2104/FitnessTrackerPrototype",
   },
   {
     id: 3,
-    title: "Heroes App",
+    title: "Heroes Explorer",
     description:
-      "Modern responsive portfolio showcasing creative work with smooth animations.",
-    image: "/placeholder.svg",
-    tags: ["HTML", "CSS", "JavaScript", 'API'],
-    category: "Website",
+      "Explorador interactivo de héroes y villanos con filtros dinámicos, favoritos persistentes y consumo de APIs externas.",
+    image: "/HeroesApp.png",
+    tags: ["React", "Tailwind CSS", "TypeScript", "API", "Filters"],
+    category: "Web Application",
+    demo: "https://heroes-app-ashy-omega.vercel.app/",
+    github: "https://github.com/CB2104/heroesApp",
   },
   {
     id: 4,
     title: "Clima App",
     description:
-      "Real-time weather application with location-based forecasts and interactive maps.",
-    image: "/placeholder.svg",
+      "Consulta climática en tiempo real con integración de APIs y visualización clara de datos meteorológicos globales.",
+    image: "/Clima-Work.png",
     tags: ["JavaScript", "HTML", "CSS", "API"],
-    category: "Web Application",
+    category: "Utility · Data App",
+    demo: "https://clima-test-inky.vercel.app",
+    github: "https://github.com/CB2104/climaTest",
   },
   {
     id: 5,
-    title: "Cara libro - Landing Social Media",
+    title: "Cara libro - Prototype",
     description:
-      "Content management system with markdown support and SEO optimization.",
-    image: "/placeholder.svg",
+      "Prototipo de interfaz social enfocado en navegación simulada, visualización de historias y arquitectura frontend.",
+    image: "/CaraLibroPrw.jpg",
     tags: ["JavaScript", "HTML", "CSS"],
-    category: "CMS",
+    category: "Frontend · UI Concept",
+    demo: "https://cara-libro-clon.vercel.app",
+    github: "https://github.com/CB2104/CaraLibroClon/",
   },
   {
     id: 6,
     title: "Zapateria - Landing Page",
     description:
-      "Analytics dashboard for tracking social media metrics and engagement.",
-    image: "/placeholder.svg",
+      "Landing interactiva centrada en animaciones, micro-interacciones y experiencia visual orientada a conversión.",
+    image: "/Shoes-EcommerceEdit.jpg",
     tags: ["JavaScript", "HTML", "CSS"],
-    category: "Dashboard",
+    category: "Frontend · UI Concept",
+    demo: "https://shoes-ecommerce-self.vercel.app",
+    github: "https://github.com/CB2104/ShoesEcommerce/",
   },
 ];
 
@@ -142,7 +163,7 @@ const MyPortfolio = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover grayscale dark:sepia group-hover:scale-105 hover:grayscale-0 dark:hover:sepia-0 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3">
                   <Badge
@@ -185,7 +206,9 @@ const MyPortfolio = () => {
                     className="flex-1 font-display uppercase text-xs tracking-wider"
                   >
                     <ExternalLink className="h-3 w-3 mr-2" />
-                    Live Demo
+                    <a href={project.demo} target="_blank">
+                      Demostracion
+                    </a>
                   </Button>
                   <Button
                     variant="outline"
@@ -193,7 +216,9 @@ const MyPortfolio = () => {
                     className="flex-1 font-display uppercase text-xs tracking-wider"
                   >
                     <Github className="h-3 w-3 mr-2" />
-                    Source
+                    <a href={project.github} target="_blank">
+                      Fuente
+                    </a>
                   </Button>
                 </div>
               </div>

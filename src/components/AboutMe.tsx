@@ -30,7 +30,7 @@ function AboutMe() {
                 </div>
                 <div className="aspect-3/4 relative">
                   <ImageWithFallback
-                    src="/public/Me.jpg"
+                    src="/Me.jpg"
                     alt="me"
                     className="w-full h-full object-cover"
                   />
@@ -126,7 +126,7 @@ function AboutMe() {
 
               {/* Interests */}
               <article className="border-4 border-black bg-white dark:bg-accent-foreground dark:border-accent">
-                <div className="border-b-2 border-black p-4 bg-white dark:bg-background">
+                <div className="border-b-2 border-black p-4 bg-black text-white dark:text-accent-foreground dark:bg-background">
                   <h3 className="font-serif uppercase tracking-wide">
                     Más Allá del Código
                   </h3>
