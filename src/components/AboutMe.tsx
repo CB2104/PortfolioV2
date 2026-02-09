@@ -51,7 +51,7 @@ function AboutMe() {
                 </div>
                 <div className="border-b-2 border-black bg-black text-white dark:border-accent dark:bg-accent dark:text-accent-foreground p-3">
                   <a
-                    href="CESAR BASTIDAS - CV.pdf"
+                    href="/BASTIDAS-CV.pdf"
                     target="_blank"
                     className="flex items-center justify-center gap-2"
                   >
