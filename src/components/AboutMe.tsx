@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 function AboutMe() {
@@ -8,7 +9,6 @@ function AboutMe() {
           {/* Section Header */}
           <div className="p-6 mb-8">
             <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-center border-b-2 border-black dark:border-accent pb-4 mb-4">
-              
               Sobre El Dev
             </h2>
             <p className="font-serif italic text-center">
@@ -35,11 +35,23 @@ function AboutMe() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4 border-t-2 border-black dark:bg-accent">
+                <div className="p-4 border-t-2 border-black dark:bg-background">
                   <p className="font-serif text-center italic text-sm">
                     “El código es como el humor. Cuando tienes que explicarlo,
                     no es tan bueno.”
                   </p>
+                </div>
+                <div className="border-b-2 border-black bg-black text-white dark:border-accent dark:bg-accent dark:text-accent-foreground p-3">
+                  <a
+                    href="CESAR BASTIDAS - CV.pdf"
+                    target="_blank"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <h3 className="font-serif uppercase text-sm tracking-wider text-center">
+                      Ver mi CV
+                    </h3>
+                  </a>
                 </div>
               </div>
             </div>

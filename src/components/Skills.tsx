@@ -45,7 +45,7 @@ const skills = [
       "CI/CD pipelines",
       "Docker & contenedores",
       "Deploy en la nube",
-      "Monitoreo y rendimiento",
+      "Monitoreo & Rendimiento",
     ],
   },
   {

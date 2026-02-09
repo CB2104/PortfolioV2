@@ -10,12 +10,10 @@ const technologies = [
   "JavaScript",
   "TypeScript",
   "Tailwind CSS",
-  "HTML",
-  "CSS",
-  "API",
-  "IA API",
+  "API Integration",
+  "AI Integration",
   "FullStack",
-  "SPA",
+  "Auth",
 ];
 
 const projects = [
@@ -40,9 +38,8 @@ const projects = [
       "React",
       "TypeScript",
       "Tailwind CSS",
-      "IA API",
+      "AI Integration",
       "FullStack",
-      "SPA",
       "Auth",
     ],
     category: "Web Application · HealthTech",
@@ -55,7 +52,7 @@ const projects = [
     description:
       "Explorador interactivo de héroes y villanos con filtros dinámicos, favoritos persistentes y consumo de APIs externas.",
     image: "/HeroesApp.png",
-    tags: ["React", "Tailwind CSS", "TypeScript", "API", "Filters"],
+    tags: ["React", "Tailwind CSS", "TypeScript", "API Integration", "Filters"],
     category: "Web Application",
     demo: "https://heroes-app-ashy-omega.vercel.app/",
     github: "https://github.com/CB2104/heroesApp",
