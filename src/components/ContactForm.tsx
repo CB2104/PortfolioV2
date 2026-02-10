@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
+
+const serviceID: string = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
+const templateID: string = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
+const publicKey: string = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
+
+const toastStyles = {
+  toast: "!rounded-none",
+  title:
+    "!text-black dark:!text-foreground font-serif uppercase tracking-wider",
+  description: "!text-black dark:!text-foreground font-mono text-sm",
+  icon: "!text-black dark:!text-accent",
+  closeButton:
+    "!border-2 !border-black dark:!border-accent hover:!bg-black hover:!text-white",
+};
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,14 +26,6 @@ function ContactForm() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I will get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -25,6 +33,65 @@ function ContactForm() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+    setIsSubmitting(true);
+
+    emailjs
+      .sendForm(serviceID, templateID, formRef.current, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          toast.success("Mensaje enviado con Exito!", {
+            description:
+              "Por favor, revisa tu correo durante las próximas 24 horas.",
+            classNames: toastStyles,
+            style: {
+              border: "4px solid",
+              borderColor: document.documentElement.classList.contains("dark")
+                ? "var(--accent)"
+                : "black",
+              borderRadius: "0",
+              background: document.documentElement.classList.contains("dark")
+                ? "var(--background)"
+                : "white",
+            },
+          });
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          toast.error("Error al enviar", {
+            description: "Por favor, intenta nuevamente más tarde.",
+            classNames: toastStyles,
+            style: {
+              border: "4px solid",
+              borderColor: document.documentElement.classList.contains("dark")
+                ? "var(--chart-5)"
+                : "red",
+              borderRadius: "0",
+              background: document.documentElement.classList.contains("dark")
+                ? "var(--background)"
+                : "white",
+            },
+          });
+          console.log("Error", error.text);
+        },
+      );
+    setIsSubmitting(false);
   };
 
   return (
@@ -78,7 +145,7 @@ function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-serif uppercase text-xs tracking-widest mb-1">
-                        Phone
+                        Teléfono
                       </h4>
                       <p className="font-mono text-sm">+54 (911) 32871814</p>
                     </div>
@@ -127,12 +194,16 @@ function ContactForm() {
                     Enviame tu Mensaje
                   </h3>
                 </div>
-                <form onSubmit={handleSubmit} className="p-6 space-y-6">
+                <form
+                  onSubmit={sendEmail}
+                  ref={formRef}
+                  className="p-6 space-y-6"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label
                         htmlFor="nombre"
-                        className="block font-serif uppercase text-xs tracking-widest mb-2"
+                        className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                       >
                         Tu Nombre
                       </label>
@@ -142,6 +213,7 @@ function ContactForm() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        disabled={isSubmitting}
                         required
                         className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black dark:bg-ring focus:outline-none focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
                         placeholder="Nombre Completo"
@@ -151,7 +223,7 @@ function ContactForm() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block font-serif uppercase text-xs tracking-widest mb-2"
+                        className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                       >
                         Dirección de Email
                       </label>
@@ -161,6 +233,7 @@ function ContactForm() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        disabled={isSubmitting}
                         required
                         className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
                         placeholder="nombre@google.com"
@@ -171,7 +244,7 @@ function ContactForm() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block font-serif uppercase text-xs tracking-widest mb-2"
+                      className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                     >
                       Asunto
                     </label>
@@ -180,6 +253,7 @@ function ContactForm() {
                       id="subject"
                       name="subject"
                       value={formData.subject}
+                      disabled={isSubmitting}
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
@@ -190,7 +264,7 @@ function ContactForm() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block font-serif uppercase text-xs tracking-widest mb-2"
+                      className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                     >
                       Mensaje
                     </label>
@@ -198,6 +272,7 @@ function ContactForm() {
                       id="message"
                       name="message"
                       value={formData.message}
+                      disabled={isSubmitting}
                       onChange={handleChange}
                       required
                       rows={6}
@@ -208,10 +283,11 @@ function ContactForm() {
 
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full md:w-auto px-8 py-4 dark:border-accent dark:bg-accent dark:text-accent-foreground dark:hover:bg-background bg-black text-white border-2 border-black hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2 font-serif uppercase tracking-wider "
                   >
                     <Send size={20} />
-                    Contáctame
+                    {isSubmitting ? "Enviando..." : "Contáctame"}
                   </button>
                 </form>
               </article>

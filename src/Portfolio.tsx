@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 function Portfolio() {
   return (
     <>
-      <Toaster />
+      <Toaster position="top-center"/>
       <Routes>
         <Route path="/" element={<Layout />}></Route>
         <Route path="*" element={<Layout/>}></Route>
