@@ -153,7 +153,7 @@ const MyPortfolio = () => {
                   >
                     <Github className="h-3 w-3 mr-2" />
                     <a href={project.github} target="_blank">
-                      {t("button.source")}
+                      {t("buttons.source")}
                     </a>
                   </Button>
                 </div>
