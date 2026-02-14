@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 const serviceID: string = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
 const templateID: string = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
@@ -19,6 +20,7 @@ const toastStyles = {
 };
 
 function ContactForm() {
+  const { t } = useTranslation("common");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,9 +52,8 @@ function ContactForm() {
       })
       .then(
         () => {
-          toast.success("Mensaje enviado con Exito!", {
-            description:
-              "Por favor, revisa tu correo durante las próximas 24 horas.",
+          toast.success(t("contact.submit.success.title"), {
+            description: t("contact.submit.success.descrip"),
             classNames: toastStyles,
             style: {
               border: "4px solid",
@@ -74,8 +75,8 @@ function ContactForm() {
           console.log("SUCCESS!");
         },
         (error) => {
-          toast.error("Error al enviar", {
-            description: "Por favor, intenta nuevamente más tarde.",
+          toast.error(t("contact.submit.error.title"), {
+            description: t("contact.submit.error.descrip"),
             classNames: toastStyles,
             style: {
               border: "4px solid",
@@ -101,11 +102,10 @@ function ContactForm() {
           {/* Section Header */}
           <div className="border-4 border-black dark:border-accent p-6 mb-8">
             <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-center border-b-2 border-black dark:border-accent pb-4 mb-4">
-              Estemos En Contacto
+              {t("contact.title")}
             </h2>
             <p className="font-serif italic text-center">
-              Envía tu consulta - respuesta garantizada en las próximas 24
-              horas.
+              {t("contact.subtitle")}
             </p>
           </div>
 
@@ -121,7 +121,7 @@ function ContactForm() {
               <article className="border-4 border-black bg-white dark:bg-background dark:border-accent ">
                 <div className="border-b-2 border-black p-4 bg-black text-white dark:border-accent dark:bg-accent dark:text-accent-foreground">
                   <h3 className="font-serif uppercase text-sm tracking-wider">
-                    Información de Contacto
+                    {t("contact.info.title")}
                   </h3>
                 </div>
                 <div className="p-6 space-y-4">
@@ -131,7 +131,7 @@ function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-serif uppercase text-xs tracking-widest mb-1">
-                        Email
+                        {t("contact.info.mail")}
                       </h4>
                       <p className="font-mono text-sm">
                         cesar.dbastidas@gmail.com
@@ -145,7 +145,7 @@ function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-serif uppercase text-xs tracking-widest mb-1">
-                        Teléfono
+                        {t("contact.info.phone")}
                       </h4>
                       <p className="font-mono text-sm">+54 (911) 32871814</p>
                     </div>
@@ -157,7 +157,7 @@ function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-serif uppercase text-xs tracking-widest mb-1">
-                        Ubicación
+                        {t("contact.info.phone")}
                       </h4>
                       <p className="font-mono text-sm">Buenos Aires, BA</p>
                     </div>
@@ -167,20 +167,20 @@ function ContactForm() {
 
               <article className="border-4 border-black bg-white p-6 dark:border-accent dark:bg-background dark:text-foreground">
                 <h3 className="font-serif uppercase text-xs tracking-widest mb-3 border-b-2 border-black pb-2 dark:border-accent">
-                  Horas Activo
+                  {t("contact.hour.title")}
                 </h3>
                 <div className="space-y-2 font-mono text-sm">
                   <div className="flex justify-between">
-                    <span>Lun - Vie</span>
+                    <span>{t("contact.hour.days")}</span>
                     <span>9AM - 8PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sabado</span>
+                    <span>{t("contact.hour.day")}</span>
                     <span>10AM - 2PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Domingo</span>
-                    <span>Solo mensajes</span>
+                    <span>{t("contact.hour.rest")}</span>
+                    <span>{t("contact.hour.text")}</span>
                   </div>
                 </div>
               </article>
@@ -191,7 +191,7 @@ function ContactForm() {
               <article className="border-4 border-black bg-white dark:border-accent dark:bg-accent-foreground">
                 <div className="border-b-2 border-black p-4 bg-black text-white dark:border-accent dark:bg-accent dark:text-accent-foreground">
                   <h3 className="font-serif text-xl uppercase tracking-wide">
-                    Enviame tu Mensaje
+                    {t("contact.formContact.title")}
                   </h3>
                 </div>
                 <form
@@ -205,7 +205,7 @@ function ContactForm() {
                         htmlFor="nombre"
                         className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                       >
-                        Tu Nombre
+                        {t("contact.formContact.name")}
                       </label>
                       <input
                         type="text"
@@ -216,7 +216,7 @@ function ContactForm() {
                         disabled={isSubmitting}
                         required
                         className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black dark:bg-ring focus:outline-none focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
-                        placeholder="Nombre Completo"
+                        placeholder={t("contact.formContact.inputName")}
                       />
                     </div>
 
@@ -225,7 +225,7 @@ function ContactForm() {
                         htmlFor="email"
                         className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                       >
-                        Dirección de Email
+                        {t("contact.formContact.email")}
                       </label>
                       <input
                         type="email"
@@ -236,7 +236,7 @@ function ContactForm() {
                         disabled={isSubmitting}
                         required
                         className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
-                        placeholder="nombre@google.com"
+                        placeholder="12345@google.com"
                       />
                     </div>
                   </div>
@@ -246,7 +246,7 @@ function ContactForm() {
                       htmlFor="subject"
                       className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                     >
-                      Asunto
+                      {t("contact.formContact.subject")}
                     </label>
                     <input
                       type="text"
@@ -257,7 +257,7 @@ function ContactForm() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none dark:bg-ring focus:ring-2 focus:ring-black font-mono dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
-                      placeholder="Consulta de proyecto"
+                      placeholder={t("contact.formContact.inputSubject")}
                     />
                   </div>
 
@@ -266,7 +266,7 @@ function ContactForm() {
                       htmlFor="message"
                       className="block font-serif uppercase text-xs tracking-widest mb-2 dark:text-accent"
                     >
-                      Mensaje
+                      {t("contact.formContact.message")}
                     </label>
                     <textarea
                       id="message"
@@ -277,7 +277,7 @@ function ContactForm() {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border-2 focus:bg-neutral-200 border-black focus:outline-none focus:ring-2 focus:ring-black font-mono resize-none dark:bg-ring dark:border-accent dark:focus:bg-accent dark:text-accent-foreground"
-                      placeholder="Cuéntame sobre tu proyecto..."
+                      placeholder={t("contact.formContact.inputMessage")}
                     />
                   </div>
 
@@ -287,7 +287,9 @@ function ContactForm() {
                     className="w-full md:w-auto px-8 py-4 dark:border-accent dark:bg-accent dark:text-accent-foreground dark:hover:bg-background bg-black text-white border-2 border-black hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2 font-serif uppercase tracking-wider "
                   >
                     <Send size={20} />
-                    {isSubmitting ? "Enviando..." : "Contáctame"}
+                    {isSubmitting
+                      ? t("contact.formContact.sending")
+                      : t("contact.formContact.send")}
                   </button>
                 </form>
               </article>

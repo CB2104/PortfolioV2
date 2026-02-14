@@ -1,0 +1,60 @@
+{
+  "title": "Habilidades",
+  "subtitle": "Uma jornada de crescimento contínuo em conhecimento e competências técnicas.",
+  "competencies": "Competências-chave",
+  "items": [
+    {
+      "id": 1,
+      "title": "Desenvolvimento Frontend",
+      "institution": "Aprendizado autodidata e formação online",
+      "period": "2020 – Presente",
+      "description": "Domínio de frameworks modernos como React e Next.js, com foco em interfaces responsivas, acessíveis e de alto desempenho.",
+      "highlights": [
+        "React & Next.js",
+        "TypeScript",
+        "Design Responsivo",
+        "Acessibilidade Web"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Desenvolvimento Backend",
+      "institution": "Formação universitária incompleta",
+      "period": "2020 – 2022",
+      "description": "Experiência com tecnologias server-side, APIs RESTful, modelagem de bancos de dados e estratégias de deploy em nuvem.",
+      "highlights": [
+        "Node.js & Express",
+        "Modelagem de Banco de Dados",
+        "Strapi",
+        "Desenvolvimento de APIs",
+        "Serviços em Nuvem"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DevOps & Cloud Engineering",
+      "institution": "Online — Argentina",
+      "period": "2024 – Presente",
+      "description": "Aprendizado focado em integração contínua, deploy automatizado e arquitetura em nuvem para aplicações modernas.",
+      "highlights": [
+        "Pipelines de CI/CD",
+        "Docker e Contêineres",
+        "Deploy em Nuvem",
+        "Monitoramento e Performance"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "UI/UX Design",
+      "institution": "Online — Argentina",
+      "period": "2021 – 2022",
+      "description": "Estudo de princípios de design centrado no usuário, prototipagem e design systems. Proficiência em Figma e ferramentas criativas modernas.",
+      "highlights": [
+        "Pesquisa com Usuários",
+        "Prototipagem",
+        "Design Systems",
+        "Figma, Photoshop e IA Generativa"
+      ]
+    }
+  ]
+}

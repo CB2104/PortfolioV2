@@ -3,16 +3,20 @@ import { motion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import { LangSwitcher } from "../LangSwitcher";
+import { useTranslation } from "react-i18next";
 
-const navItems = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Portafolio", href: "#portafolio" },
-  { label: "Mis habilidades", href: "#skills" },
-  { label: "Sobre mi", href: "#about" },
-  { label: "Contacto", href: "#contacto" },
-];
 
 const NavBar = () => {
+  const { t } = useTranslation("common");
+  
+  const navItems = [
+    { label: t('nav.home'), href: "#inicio" },
+    { label: t("nav.portfolio"), href: "#portafolio" },
+    { label: t("nav.skills"), href: "#skills" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.contact"), href: "#contacto" },
+  ];
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
@@ -51,9 +55,9 @@ const NavBar = () => {
               e.preventDefault();
               scrollToSection("#inicio");
             }}
-            className="font-mono font-bold text-2xl md:text-3xl tracking-wide hover:opacity-80 transition-opacity"
+            className="font-mono font-bold text-xl sm:text-2xl md:text-lg lg:text-3xl tracking-wide"
           >
-            THE CESAR TIMES 
+            THE CESAR TIMES
           </a>
 
           {/* Desktop Navigation */}
@@ -71,6 +75,8 @@ const NavBar = () => {
                 {item.label}
               </a>
             ))}
+
+            <LangSwitcher />
 
             {/* Theme Toggle */}
             <Button
@@ -90,7 +96,8 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-3">
+            <LangSwitcher/>
             <Button
               variant="ghost"
               size="icon"

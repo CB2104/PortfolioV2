@@ -1,0 +1,60 @@
+{
+  "title": "Habilidades",
+  "subtitle": "Una crónica del crecimiento en conocimientos y competencias.",
+  "competencies": "Competencias Claves",
+  "items": [
+    {
+      "id": 1,
+      "title": "Frontend Development",
+      "institution": "Aprendizaje Autodidacta & Formación en Línea",
+      "period": "2020 - Presente",
+      "description": "Dominio de frameworks modernos como React y Next.js. Especializado en interfaces responsivas, accesibles y de alto rendimiento.",
+      "highlights": [
+        "React & Next.js",
+        "TypeScript",
+        "Responsive Design",
+        "Web Accessibility"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Backend Development",
+      "institution": "Formación Universitaria Incompleta",
+      "period": "2020 - 2022",
+      "description": "Experiencia en tecnologías del lado del servidor, APIs RESTful, diseño de bases de datos y estrategias de despliegue en la nube.",
+      "highlights": [
+        "Node.js & Express",
+        "Database Design",
+        "Strapi",
+        "API Development",
+        "Cloud Services"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DevOps & Cloud Engineering",
+      "institution": "En línea — Argentina",
+      "period": "2024 - Actualidad",
+      "description": "Aprendizaje enfocado en integración continua, despliegue automatizado y arquitectura en la nube para aplicaciones modernas.",
+      "highlights": [
+        "CI/CD pipelines",
+        "Docker & contenedores",
+        "Deploy en la nube",
+        "Monitoreo & Rendimiento"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "UI/UX Design",
+      "institution": "En línea — Argentina",
+      "period": "2021 - 2022",
+      "description": "Estudio de principios de diseño centrado en el usuario, prototipado y sistemas de diseño. Competente en Figma y herramientas modernas.",
+      "highlights": [
+        "User Research",
+        "Prototipado",
+        "Design Systems",
+        "Figma, Photoshop & IA generativa"
+      ]
+    }
+  ]
+}

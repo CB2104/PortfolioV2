@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "skills": "Mis habilidades",
+    "about": "Sobre Mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "date": "es-EU",
+    "welcome": "Bienvenido a mi Portafolio",
+    "intro": "Cada dia es una nueva oportunidad de aprender",
+    "sec1": {
+      "title": "últimas noticias",
+      "subtitle": "En Búsqueda De Una Nueva Oportunidad Laboral",
+      "content": "Full-stack developer enfocado en diseño, velocidad y escalabilidad. Disponible para proyectos innovadores."
+    },
+    "sec2": {
+      "title": "Reportaje destacado",
+      "subtitle": "Ver el Portafolio Completo",
+      "content": "Descubre una selección curada de proyectos web, donde el diseño, la precisión y la creatividad se convierten en soluciones reales.",
+      "link": "Ver Mi Trabajo"
+    }
+  },
+  "about": {
+    "title": "Sobre El Dev",
+    "subtitle": "Una entrevista exclusiva con la mente detrás del código, un desarrollador full-stack en constante evolución que transforma curiosidad en soluciones digitales reales",
+    "profile": {
+      "title": "Perfil",
+      "descrip": "El código es como el humor. Cuando tienes que explicarlo, no es tan bueno.",
+      "cv": "Ver mi CV"
+    },
+    "intro": {
+      "title": "Introducción",
+      "descrip1": "Hola, soy un desarrollador full-stack apasionado por crear soluciones elegantes a problemas complejos. Mi camino en el desarrollo de software comenzó con la curiosidad por entender cómo funcionan los sitios web, y ha evolucionado hacia una dedicación constante por construir experiencias digitales útiles, modernas y bien diseñadas.",
+      "descrip2": "Cuento con experiencia principalmente en el ecosistema frontend, trabajando con tecnologías como React, Next.js,JavaScript moderno y herramientas de diseño de interfaces responsivas, accesibles y de buen rendimiento. Además, estoy ampliando mis conocimientos hacia el backend con Node.js, APIs, bases de datos y despliegues en la nube, desarrollando una visión integral del desarrollo web. Me enfoco en escribir código limpio, mantenible y en crear interfaces que combinen funcionalidad, estética y buena experiencia de usuario.",
+      "descrip3": "Fuera del código, continúo aprendiendo de forma autodidacta, explorando nuevas tecnologías, integraciones con inteligencia artificial y mejores prácticas de desarrollo. Disfruto enfrentar nuevos desafíos, mejorar constantemente mis habilidades y colaborar en proyectos que generen impacto real."
+    },
+    "info": {
+      "title": "Información Destacada",
+      "sub1": "Ubicación",
+      "cont1": "Buenos Aires, BA",
+      "sub2": "Experiencia",
+      "cont2": "2+ Años",
+      "sub3": "Especialidad",
+      "cont3": "Full-Stack Development (Front-End Énfasis)",
+      "sub4": "Idiomas",
+      "cont4": "Ingles, Español"
+    },
+    "more": {
+      "title": "Más Allá del Código",
+      "interest": [
+        "Podcasts de Tecnología",
+        "Lectura & Escritura Técnica",
+        "Diseño UI/UX",
+        "Open Source",
+        "Cine & Animación",
+        "Exploración"
+      ]
+    },
+  "cv": "/BASTIDAS-CV.pdf" 
+  },
+  "contact": {
+    "title": "Estemos En Contacto",
+    "subtitle": "Envía tu consulta - respuesta garantizada en las próximas 24 horas.",
+    "info": {
+      "title": "Información de Contacto",
+      "mail": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    },
+    "hour": {
+      "title": "Horas Activo",
+      "days": "Lun - Vie",
+      "day": "Sabado",
+      "rest": "Domingo",
+      "text": "Solo mensajes"
+    },
+    "formContact": {
+      "title": "Enviame tu Mensaje",
+      "name": "Tu Nombre",
+      "inputName": "Nombre Completo",
+      "email": "Dirección de E-mail",
+      "subject": "Asunto",
+      "inputSubject": "Consulta de proyecto",
+      "message": "Mensaje",
+      "inputMessage": "Cuéntame sobre tu proyecto...",
+      "send": "Contáctame",
+      "sending": "Enviando..."
+    },
+    "submit": {
+      "success": {
+        "title": "¡Mensaje enviado!",
+        "descrip": "Por favor, revisa tu correo durante las próximas 24 horas."
+      },
+      "error": {
+        "title": "Error al enviar",
+        "descrip": "Por favor, intenta nuevamente más tarde."
+      }
+    }
+  }
+}

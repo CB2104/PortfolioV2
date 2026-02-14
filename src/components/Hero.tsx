@@ -2,15 +2,18 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
-const currentDate = new Date().toLocaleDateString("es-EU", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation("common");
+
+  const currentDate = new Date().toLocaleDateString(t("hero.date"), {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <>
       <section
@@ -27,7 +30,7 @@ const Hero = () => {
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="h-px flex-1 max-w-24 bg-border" />
               <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-display">
-                Bienvenido a mi Portafolio
+                {t("hero.welcome")}
               </span>
               <div className="h-px flex-1 max-w-24 bg-border" />
             </div>
@@ -39,9 +42,7 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-muted-foreground border-y-2 border-double border-border py-3">
               <span className="font-body">{currentDate}</span>
               <span className="hidden md:inline">•</span>
-              <span className="font-body italic">
-                "Cada dia es una nueva oportunidad de aprender"
-              </span>
+              <span className="font-body italic">"{t("hero.intro")}"</span>
               <span className="hidden md:inline">•</span>
               <span className="font-body">Vol. II, No. 1</span>
             </div>
@@ -54,14 +55,13 @@ const Hero = () => {
           >
             <div className="md:col-span-1 text-center md:text-left">
               <p className="font-display text-lg uppercase tracking-widest text-muted-foreground mb-2">
-                últimas noticias
+                {t("hero.sec1.title")}
               </p>
               <h3 className="font-display text-2xl md:text-3xl font-bold leading-tight mb-4">
-                En Búsqueda De Una Nueva Oportunidad Laboral
+                {t("hero.sec1.subtitle")}
               </h3>
               <p className="font-body text-m leading-relaxed text-muted-foreground">
-                Full-stack developer enfocado en diseño, velocidad y
-                escalabilidad. Disponible para proyectos innovadores.
+                {t("hero.sec1.content")}
               </p>
             </div>
 
@@ -84,19 +84,17 @@ const Hero = () => {
             <div className="md:col-span-1 text-center md:text-right">
               <div className="newspaper-border p-6 inline-block">
                 <p className="font-display text-sm uppercase tracking-widest mb-3">
-                  Reportaje destacado
+                  {t("hero.sec2.title")}
                 </p>
                 <h3 className="font-display text-2xl font-bold mb-4">
-                  Ver el Portafolio Completo
+                  {t("hero.sec2.subtitle")}
                 </h3>
                 <p className="font-body text-muted-foreground mb-6 text-sm">
-                  Descubre una selección curada de proyectos web, donde el
-                  diseño, la precisión y la creatividad se convierten en
-                  soluciones reales.
+                  {t("hero.sec2.content")}
                 </p>
                 <a href="#portafolio">
                   <Button className="w-full font-display uppercase tracking-widest border-2 border-double">
-                    Ver Mi Trabajo
+                    {t("hero.sec2.link")}
                     <ArrowDown className="ml-2 h-4 w-4" />
                   </Button>
                 </a>

@@ -1,75 +1,31 @@
 import { motion } from "framer-motion";
-import { CloudCog, Code, Layers, Lightbulb } from "lucide-react";
+import { CloudCog, Code, Layers, Lightbulb, type LucideIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const skills = [
-  {
-    id: 1,
-    icon: Code,
-    title: "Frontend Development",
-    institution: "Aprendizaje Autodidacta & Formación en Línea",
-    period: "2020 - Presente",
-    description:
-      "Mastered modern frontend frameworks including React, Next.js, and Vue. Specialized in building responsive, accessible, and performant user interfaces.",
-    highlights: [
-      "React & Next.js",
-      "TypeScript",
-      "Responsive Design",
-      "Web Accessibility",
-    ],
-  },
-  {
-    id: 2,
-    icon: Layers,
-    title: "Backend Development",
-    institution: "Formación Universitaria Incompleta",
-    period: "2020 - 2022",
-    description:
-      "Desarrollé experiencia en tecnologías del lado del servidor, APIs RESTful, diseño de bases de datos y estrategias de despliegue en la nube.",
-    highlights: [
-      "Node.js & Express",
-      "Database Design",
-      "Strapi",
-      "API Development",
-      "Cloud Services",
-    ],
-  },
-  {
-    id: 3,
-    icon: CloudCog,
-    title: "DevOps & Cloud Engineering",
-    institution: "En línea — Argentina",
-    period: "2024 - Actualidad",
-    description:
-      "Aprendizaje enfocado en integración continua, despliegue automatizado y arquitectura en la nube para aplicaciones modernas. Experiencia práctica con contenedores, servicios cloud y optimización de entornos de producción.",
-    highlights: [
-      "CI/CD pipelines",
-      "Docker & contenedores",
-      "Deploy en la nube",
-      "Monitoreo & Rendimiento",
-    ],
-  },
-  {
-    id: 4,
-    icon: Lightbulb,
-    title: "UI/UX Design",
-    institution: "En línea — Argentina",
-    period: "2021 - 2022",
-    description:
-      "Estudié principios de diseño centrado en el usuario, prototipado y sistemas de diseño. Competente en Figma, Photoshop y herramientas modernas de diseño.",
-    highlights: [
-      "User Research",
-      "Prototipado",
-      "Design Systems",
-      "Figma, Photoshop & IA generativa",
-    ],
-  },
-];
+interface Skill {
+  id: number;
+  title: string;
+  institution: string;
+  period: string;
+  description: string;
+  highlights: string[];
+}
+
+const SKILL_ICONS: Record<number, LucideIcon> = {
+  1: Code,
+  2: Layers,
+  3: CloudCog,
+  4: Lightbulb,
+};
 
 function Skills() {
+  const { t } = useTranslation("skills");
+
+const skills = t('items', { returnObjects: true }) as Skill[];
+
   return (
     <div className="pt-20 border-t-4 border-double border-border" id="skills">
       <motion.section
-        
         className="min-h-screen px-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -78,12 +34,12 @@ function Skills() {
       >
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className=" p-6 mb-8" >
+          <div className=" p-6 mb-8">
             <h2 className="font-display text-4xl text-center md:text-5xl font-bold uppercase tracking-wide mb-4">
-              Formación & Experiencia
+              {t("title")}
             </h2>
             <p className="font-serif italic text-center">
-              Una crónica del crecimiento en conocimientos y competencias.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -96,7 +52,7 @@ function Skills() {
             transition={{ duration: 0.6 }}
           >
             {skills.map((skill) => {
-              const Icon = skill.icon;
+              const Icon = SKILL_ICONS[skill.id];
               return (
                 <article
                   key={skill.id}
@@ -130,7 +86,7 @@ function Skills() {
                   {/* Highlights */}
                   <div className="p-4">
                     <h4 className="font-serif uppercase text-xs tracking-widest mb-3 dark:text-accent">
-                      Competencias Claves
+                      {t("competencies")}
                     </h4>
                     <div className="grid grid-cols-2 gap-2">
                       {skill.highlights.map((highlight) => (

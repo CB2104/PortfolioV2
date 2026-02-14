@@ -3,9 +3,20 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "./ui/badge";
+import { useTranslation } from "react-i18next";
 
-const technologies = [
-  "Todos",
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  image: string;
+  demo: string;
+  github: string;
+}
+
+const TECH_FILTERS = [
   "React",
   "JavaScript",
   "TypeScript",
@@ -16,89 +27,18 @@ const technologies = [
   "Auth",
 ];
 
-const projects = [
-  {
-    id: 1,
-    title: "Plataforma E-Commerce",
-    description:
-      "Plataforma e-commerce con roles de usuario, filtrado avanzado y backend en la nube con gestión de estado global.",
-    image: "/TesloShop.png",
-    tags: ["React", "TypeScript", "Tailwind CSS", "FullStack", "Auth"],
-    category: "Web Application · E-commerce",
-    demo: `https://tesloshop-practice.netlify.app`,
-    github: "https://github.com/CB2104/tesloShop",
-  },
-  {
-    id: 2,
-    title: "Fitness Tracker AI",
-    description:
-      "App full-stack de seguimiento calórico con autenticación segura y asistencia mediante IA para objetivos físicos personalizados.",
-    image: "/FitnessTrack.png",
-    tags: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "AI Integration",
-      "FullStack",
-      "Auth",
-    ],
-    category: "Web Application · HealthTech",
-    demo: "https://fitness-tracker-prototype.vercel.app",
-    github: "https://github.com/CB2104/FitnessTrackerPrototype",
-  },
-  {
-    id: 3,
-    title: "Heroes Explorer",
-    description:
-      "Explorador interactivo de héroes y villanos con filtros dinámicos, favoritos persistentes y consumo de APIs externas.",
-    image: "/HeroesApp.png",
-    tags: ["React", "Tailwind CSS", "TypeScript", "API Integration", "Filters"],
-    category: "Web Application",
-    demo: "https://heroes-app-ashy-omega.vercel.app/",
-    github: "https://github.com/CB2104/heroesApp",
-  },
-  {
-    id: 4,
-    title: "Clima App",
-    description:
-      "Consulta climática en tiempo real con integración de APIs y visualización clara de datos meteorológicos globales.",
-    image: "/Clima-Work.png",
-    tags: ["JavaScript", "HTML", "CSS", "API"],
-    category: "Utility · Data App",
-    demo: "https://clima-test-inky.vercel.app",
-    github: "https://github.com/CB2104/climaTest",
-  },
-  {
-    id: 5,
-    title: "Cara libro - Prototype",
-    description:
-      "Prototipo de interfaz social enfocado en navegación simulada, visualización de historias y arquitectura frontend.",
-    image: "/CaraLibroPrw.jpg",
-    tags: ["JavaScript", "HTML", "CSS"],
-    category: "Frontend · UI Concept",
-    demo: "https://cara-libro-clon.vercel.app",
-    github: "https://github.com/CB2104/CaraLibroClon/",
-  },
-  {
-    id: 6,
-    title: "Zapateria - Landing Page",
-    description:
-      "Landing interactiva centrada en animaciones, micro-interacciones y experiencia visual orientada a conversión.",
-    image: "/Shoes-EcommerceEdit.jpg",
-    tags: ["JavaScript", "HTML", "CSS"],
-    category: "Frontend · UI Concept",
-    demo: "https://shoes-ecommerce-self.vercel.app",
-    github: "https://github.com/CB2104/ShoesEcommerce/",
-  },
-];
-
 const MyPortfolio = () => {
-  const [activeFilter, setActiveFilter] = useState("Todos");
+  const { t } = useTranslation("portfolio");
+  const [activeFilter, setActiveFilter] = useState<string>("ALL");
+
+  const projects = t("projects", { returnObjects: true }) as Project[];
+
+  const filters = ["ALL", ...TECH_FILTERS];
 
   const filteredProjects =
-    activeFilter === "Todos"
+    activeFilter === "ALL"
       ? projects
-      : projects.filter((project) => project.tags.includes(activeFilter));
+      : projects.filter((p) => p.tags.includes(activeFilter));
 
   return (
     <section
@@ -115,11 +55,10 @@ const MyPortfolio = () => {
         >
           <div className="newspaper-divider mb-8" />
           <h2 className="font-display text-4xl md:text-5xl font-bold uppercase tracking-wide mb-4">
-            Portafolio
+            {t("title")}
           </h2>
           <p className="font-body text-lg text-muted-foreground italic max-w-2xl mx-auto">
-            "Una selección de proyectos que refleja experiencia en el desarrollo
-            web moderno"
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -130,17 +69,17 @@ const MyPortfolio = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
-          {technologies.map((tech) => (
+          {filters.map((filter) => (
             <button
-              key={tech}
-              onClick={() => setActiveFilter(tech)}
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
               className={`px-4 py-2 font-display text-xs uppercase tracking-widest border-2 transition-all duration-200 ${
-                activeFilter === tech
+                activeFilter === filter
                   ? "bg-primary text-primary-foreground border-primary"
                   : "bg-transparent border-border hover:bg-accent"
               }`}
             >
-              {tech}
+              {filter === "ALL" ? t("filters.all") : filter}
             </button>
           ))}
         </motion.div>
@@ -204,7 +143,7 @@ const MyPortfolio = () => {
                   >
                     <ExternalLink className="h-3 w-3 mr-2" />
                     <a href={project.demo} target="_blank">
-                      Demostracion
+                      {t("buttons.demo")}
                     </a>
                   </Button>
                   <Button
@@ -214,7 +153,7 @@ const MyPortfolio = () => {
                   >
                     <Github className="h-3 w-3 mr-2" />
                     <a href={project.github} target="_blank">
-                      Fuente
+                      {t("button.source")}
                     </a>
                   </Button>
                 </div>

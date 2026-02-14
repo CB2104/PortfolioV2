@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "skills": "My Skills",
+    "about": "About Me",
+    "contact": "Contact"
+  },
+  "hero": {
+    "date": "en-EU",
+    "welcome": "Welcome to my Portfolio",
+    "intro": "Every day is a new opportunity to learn",
+    "sec1": {
+      "title": "Latest news",
+      "subtitle": "Searching for a New Job Opportunity",
+      "content": "Full-stack developer focused on design, speed, and scalability. Available for innovative projects."
+    },
+    "sec2": {
+      "title": "Featured report",
+      "subtitle": "View the Full Portfolio",
+      "content": "Discover a curated selection of web projects where design, precision, and creativity become real solutions.",
+      "link": "View My Work"
+    }
+  },
+  "about": {
+    "title": "About the Developer",
+    "subtitle": "An exclusive interview with the mind behind the code — a constantly evolving full-stack developer turning curiosity into real digital solutions.",
+    "profile": {
+      "title": "Profile",
+      "descrip": "Code is like humor. When you have to explain it, it’s not that good.",
+      "cv": "View my CV"
+    },
+    "intro": {
+      "title": "Introduction",
+      "descrip1": "Hello, I’m a full-stack developer passionate about creating elegant solutions to complex problems. My journey in software development began with curiosity about how websites work and evolved into a constant dedication to building useful, modern, and well-designed digital experiences.",
+      "descrip2": "I have primary experience in the frontend ecosystem, working with technologies such as React, Next.js, modern JavaScript, and responsive, accessible, high-performance UI design tools. I am also expanding into backend development with Node.js, APIs, databases, and cloud deployments, building a comprehensive vision of web development. I focus on writing clean, maintainable code and crafting interfaces that combine functionality, aesthetics, and strong user experience.",
+      "descrip3": "Beyond coding, I continue learning in a self-driven way, exploring new technologies, AI integrations, and development best practices. I enjoy tackling new challenges, continuously improving my skills, and collaborating on projects that create real impact."
+    },
+    "info": {
+      "title": "Key Information",
+      "sub1": "Location",
+      "cont1": "Buenos Aires, BA",
+      "sub2": "Experience",
+      "cont2": "2+ Years",
+      "sub3": "Specialty",
+      "cont3": "Full-Stack Development (Frontend Focus)",
+      "sub4": "Languages",
+      "cont4": "English, Spanish"
+    },
+    "more": {
+      "title": "Beyond the Code",
+      "interest": [
+        "Technology Podcasts",
+        "Technical Reading & Writing",
+        "UI/UX Design",
+        "Open Source",
+        "Film & Animation",
+        "Exploration"
+      ]
+    },
+    "cv": "/ENGLISH-BASTIDAS-CV.pdf"
+  },
+  "contact": {
+    "title": "Let’s Get in Touch",
+    "subtitle": "Send your inquiry — response guaranteed within the next 24 hours.",
+    "info": {
+      "title": "Contact Information",
+      "mail": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "hour": {
+      "title": "Active Hours",
+      "days": "Mon – Fri",
+      "day": "Saturday",
+      "rest": "Sunday",
+      "text": "Messages only"
+    },
+    "formContact": {
+      "title": "Send Me a Message",
+      "name": "Your Name",
+      "inputName": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "inputSubject": "Project inquiry",
+      "message": "Message",
+      "inputMessage": "Tell me about your project...",
+      "send": "Contact Me",
+      "sending": "Sending..."
+    },
+    "submit": {
+      "success": {
+        "title": "Message sent!",
+        "descrip": "Please check your email within the next 24 hours."
+      },
+      "error": {
+        "title": "Sending error",
+        "descrip": "Please try again later."
+      }
+    }
+  }
+}

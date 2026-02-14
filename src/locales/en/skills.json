@@ -1,0 +1,60 @@
+{
+  "title": "Skills",
+  "subtitle": "A journey of continuous growth in knowledge and technical expertise.",
+  "competencies": "Core Competencies",
+  "items": [
+    {
+      "id": 1,
+      "title": "Frontend Development",
+      "institution": "Self-taught Learning & Online Education",
+      "period": "2020 – Present",
+      "description": "Strong command of modern frameworks such as React and Next.js, specializing in responsive, accessible, and high-performance user interfaces.",
+      "highlights": [
+        "React & Next.js",
+        "TypeScript",
+        "Responsive Design",
+        "Web Accessibility"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Backend Development",
+      "institution": "Incomplete University Studies",
+      "period": "2020 – 2022",
+      "description": "Experience with server-side technologies, RESTful APIs, database design, and cloud deployment strategies.",
+      "highlights": [
+        "Node.js & Express",
+        "Database Design",
+        "Strapi",
+        "API Development",
+        "Cloud Services"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DevOps & Cloud Engineering",
+      "institution": "Online — Argentina",
+      "period": "2024 – Present",
+      "description": "Focused learning in continuous integration, automated deployment, and cloud architecture for modern applications.",
+      "highlights": [
+        "CI/CD Pipelines",
+        "Docker & Containers",
+        "Cloud Deployment",
+        "Monitoring & Performance"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "UI/UX Design",
+      "institution": "Online — Argentina",
+      "period": "2021 – 2022",
+      "description": "Study of user-centered design principles, prototyping, and design systems. Proficient in Figma and modern creative tools.",
+      "highlights": [
+        "User Research",
+        "Prototyping",
+        "Design Systems",
+        "Figma, Photoshop & Generative AI"
+      ]
+    }
+  ]
+}

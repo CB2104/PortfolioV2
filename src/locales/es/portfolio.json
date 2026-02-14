@@ -1,0 +1,73 @@
+{
+  "title": "Portafolio",
+  "subtitle": "Una selección de proyectos que refleja experiencia en el desarrollo web moderno",
+  "filters": {
+    "all": "Todos"
+  },
+  "buttons": {
+    "demo": "Demostración",
+    "source": "Fuente"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Plataforma E-Commerce",
+      "description": "Plataforma e-commerce con roles de usuario, filtrado avanzado y backend en la nube con gestión de estado global.",
+      "category": "Aplicación Web · E-commerce",
+      "tags": ["React", "TypeScript", "Tailwind CSS", "FullStack", "Auth"],
+      "image": "/TesloShop.png",
+      "demo": "https://tesloshop-practice.netlify.app",
+      "github": "https://github.com/CB2104/tesloShop"
+    },
+    {
+      "id": 2,
+      "title": "Fitness Tracker AI",
+      "description": "App full-stack de seguimiento calórico con autenticación segura y asistencia mediante IA para objetivos físicos personalizados.",
+      "category": "Aplicación Web · HealthTech",
+      "tags": ["React", "TypeScript", "Tailwind CSS", "AI Integration", "FullStack", "Auth"],
+      "image": "/FitnessTrack.png",
+      "demo": "https://fitness-tracker-prototype.vercel.app",
+      "github": "https://github.com/CB2104/FitnessTrackerPrototype"
+    },
+    {
+      "id": 3,
+      "title": "Heroes Explorer",
+      "description": "Explorador interactivo de héroes y villanos con filtros dinámicos, favoritos persistentes y consumo de APIs externas.",
+      "category": "Aplicación Web",
+      "tags": ["React", "TypeScript", "Tailwind CSS", "API Integration"],
+      "image": "/HeroesApp.png",
+      "demo": "https://heroes-app-ashy-omega.vercel.app/",
+      "github": "https://github.com/CB2104/heroesApp"
+    },
+    {
+      "id": 4,
+      "title": "Clima App",
+      "description": "Consulta climática en tiempo real con integración de APIs y visualización clara de datos meteorológicos globales.",
+      "category": "Utilidad · App de Datos",
+      "tags": ["JavaScript", "HTML", "CSS", "API Integration"],
+      "image": "/Clima-Work.png",
+      "demo": "https://clima-test-inky.vercel.app",
+      "github": "https://github.com/CB2104/climaTest"
+    },
+    {
+      "id": 5,
+      "title": "Cara libro - Prototype",
+      "description": "Prototipo de interfaz social enfocado en navegación simulada, visualización de historias y arquitectura frontend.",
+      "category": "Frontend · Concepto UI",
+      "tags": ["JavaScript", "HTML", "CSS"],
+      "image": "/CaraLibroPrw.jpg",
+      "demo": "https://cara-libro-clon.vercel.app",
+      "github": "https://github.com/CB2104/CaraLibroClon/"
+    },
+    {
+      "id": 6,
+      "title": "Zapatería - Landing Page",
+      "description": "Landing interactiva centrada en animaciones, micro-interacciones y experiencia visual orientada a conversión.",
+      "category": "Frontend · Concepto UI",
+      "tags": ["JavaScript", "HTML", "CSS"],
+      "image": "/Shoes-EcommerceEdit.jpg",
+      "demo": "https://shoes-ecommerce-self.vercel.app",
+      "github": "https://github.com/CB2104/ShoesEcommerce/"
+    }
+  ]
+}
