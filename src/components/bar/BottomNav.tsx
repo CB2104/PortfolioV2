@@ -6,16 +6,18 @@ import {
   Save,
 } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const BottomNav = () => {
+  const { t } = useTranslation("common");
   const [activeSection, setActiveSection] = useState("#inicio");
 
   const navItems = [
-    { path: "#inicio", label: "Inicio", icon: Newspaper },
-    { path: "#portafolio", label: "Portafolio", icon: BriefcaseBusiness },
-    { path: "#skills", label: "Habilidades", icon: Save },
-    { path: "#about", label: "Sobre Mi", icon: Feather },
-    { path: "#contacto", label: "Contacto", icon: MailOpen },
+    { path: "#inicio", label: t("nav.home"), icon: Newspaper },
+    { path: "#portafolio", label: t("nav.portfolio"), icon: BriefcaseBusiness },
+    { path: "#skills", label: t("nav.skills"), icon: Save },
+    { path: "#about", label: t("nav.about"), icon: Feather },
+    { path: "#contacto", label: t("nav.contact"), icon: MailOpen },
   ];
 
   const scrollToSection = (href: string) => {
