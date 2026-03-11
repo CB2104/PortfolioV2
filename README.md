@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=000000&center=true&vCenter=true&width=700&lines=📰+Developer+Chronicle;Portafolio+Personal+V2;Diseño+Periodístico+%7C+Multiidioma+%7C+Dark+Mode" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=A0A0A0&center=true&vCenter=true&width=700&lines=📰+Developer+Chronicle;Portafolio+Personal+V2;Diseño+Periodístico+%7C+Multiidioma+%7C+Dark+Mode" alt="Typing SVG" />
 
 **Portafolio personal con estética de periódico vintage — construido con React, Framer Motion, i18next y EmailJS. Disponible en español, inglés y portugués.**
 
