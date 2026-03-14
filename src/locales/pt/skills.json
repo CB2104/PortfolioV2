@@ -6,54 +6,61 @@
     {
       "id": 1,
       "title": "Desenvolvimento Frontend",
-      "institution": "Aprendizado autodidata e formação online",
-      "period": "2020 – Presente",
-      "description": "Domínio de frameworks modernos como React e Next.js, com foco em interfaces responsivas, acessíveis e de alto desempenho.",
+      "institution": "Autodidata · Udemy (600+ hrs) · Projetos em Produção",
+      "period": "2024 - Presente",
+      "description": "Desenvolvimento de interfaces modernas com React e Next.js 14+, com foco em performance, acessibilidade e experiência do usuário. Trabalho com TypeScript como padrão, componentes reutilizáveis com Shadcn/UI e animações com Framer Motion.",
       "highlights": [
-        "React & Next.js",
+        "React.js & Next.js 14+",
         "TypeScript",
-        "Design Responsivo",
-        "Acessibilidade Web"
+        "Tailwind CSS & Shadcn/UI",
+        "Design Responsivo & Acessibilidade",
+        "Zustand & TanStack Query",
+        "Framer Motion"
       ]
     },
     {
       "id": 2,
-      "title": "Desenvolvimento Backend",
-      "institution": "Formação universitária incompleta",
-      "period": "2020 – 2022",
-      "description": "Experiência com tecnologias server-side, APIs RESTful, modelagem de bancos de dados e estratégias de deploy em nuvem.",
+      "title": "Backend & APIs",
+      "institution": "Udemy · Projetos Fullstack Próprios em Produção",
+      "period": "2024 - Presente",
+      "description": "Construção de APIs RESTful com NestJS e Node.js, integração com bancos de dados relacionais e não relacionais, e gerenciamento de autenticação com Auth.js, JWT e OAuth. Aplicado em projetos fullstack reais como AI Fitness Tracker e TesloShop.",
       "highlights": [
-        "Node.js & Express",
-        "Modelagem de Banco de Dados",
-        "Strapi",
-        "Desenvolvimento de APIs",
-        "Serviços em Nuvem"
+        "NestJS & Node.js",
+        "RESTful APIs",
+        "PostgreSQL & MongoDB",
+        "Prisma ORM",
+        "Auth.js · JWT · OAuth",
+        "Zod"
       ]
     },
     {
       "id": 3,
-      "title": "DevOps & Cloud Engineering",
-      "institution": "Online — Argentina",
-      "period": "2024 – Presente",
-      "description": "Aprendizado focado em integração contínua, deploy automatizado e arquitetura em nuvem para aplicações modernas.",
+      "title": "DevOps, Tooling & QA",
+      "institution": "Udemy · Prática Profissional · Projetos Próprios",
+      "period": "2023 - Presente",
+      "description": "Configuração de pipelines de CI/CD com GitHub Actions, containerização com Docker e deploys no Vercel e Netlify. Experiência prévia em QA remoto — testes funcionais, reporte de bugs e testes de geolocalização em ambiente profissional com ferramentas de virtualização.",
       "highlights": [
-        "Pipelines de CI/CD",
-        "Docker e Contêineres",
-        "Deploy em Nuvem",
-        "Monitoramento e Performance"
+        "Docker & CI/CD",
+        "GitHub Actions",
+        "Vercel & Netlify",
+        "Vitest & React Testing Library",
+        "Testes Funcionais & Reporte de Bugs",
+        "VMware & Linux"
       ]
     },
     {
       "id": 4,
-      "title": "UI/UX Design",
-      "institution": "Online — Argentina",
-      "period": "2021 – 2022",
-      "description": "Estudo de princípios de design centrado no usuário, prototipagem e design systems. Proficiência em Figma e ferramentas criativas modernas.",
+      "title": "IA & Ferramentas de Design",
+      "institution": "Big School — Desenvolvimento com IA (2026) · Prática em Projetos",
+      "period": "2025 - Presente",
+      "description": "Integração de modelos de IA em fluxos de desenvolvimento real — desde consumo de APIs até workflows assistidos com Claude Code e Codex. Familiarizado com Spec-Driven Development e Prompt Engineering aplicado. Uso o Figma para trabalhar com sistemas de design que depois implemento em código.",
       "highlights": [
-        "Pesquisa com Usuários",
-        "Prototipagem",
-        "Design Systems",
-        "Figma, Photoshop e IA Generativa"
+        "Gemini API",
+        "Claude Code & Codex",
+        "Prompt Engineering",
+        "Spec-Driven Development",
+        "MCP Protocol",
+        "Figma & Design Systems"
       ]
     }
   ]

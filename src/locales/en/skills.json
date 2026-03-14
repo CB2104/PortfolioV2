@@ -6,54 +6,61 @@
     {
       "id": 1,
       "title": "Frontend Development",
-      "institution": "Self-taught Learning & Online Education",
-      "period": "2020 – Present",
-      "description": "Strong command of modern frameworks such as React and Next.js, specializing in responsive, accessible, and high-performance user interfaces.",
+      "institution": "Self-taught · Udemy (600+ hrs) · Deployed Projects",
+      "period": "2024 - Present",
+      "description": "Building modern interfaces with React and Next.js 14+, focused on performance, accessibility and user experience. I work with TypeScript as a standard, reusable components with Shadcn/UI and animations with Framer Motion.",
       "highlights": [
-        "React & Next.js",
+        "React.js & Next.js 14+",
         "TypeScript",
-        "Responsive Design",
-        "Web Accessibility"
+        "Tailwind CSS & Shadcn/UI",
+        "Responsive Design & Accessibility",
+        "Zustand & TanStack Query",
+        "Framer Motion"
       ]
     },
     {
       "id": 2,
-      "title": "Backend Development",
-      "institution": "Incomplete University Studies",
-      "period": "2020 – 2022",
-      "description": "Experience with server-side technologies, RESTful APIs, database design, and cloud deployment strategies.",
+      "title": "Backend & APIs",
+      "institution": "Udemy · Own Fullstack Projects Deployed",
+      "period": "2024 - Present",
+      "description": "Building RESTful APIs with NestJS and Node.js, integrating relational and non-relational databases, and handling authentication with Auth.js, JWT and OAuth. Applied in real fullstack projects like AI Fitness Tracker and TesloShop.",
       "highlights": [
-        "Node.js & Express",
-        "Database Design",
-        "Strapi",
-        "API Development",
-        "Cloud Services"
+        "NestJS & Node.js",
+        "RESTful APIs",
+        "PostgreSQL & MongoDB",
+        "Prisma ORM",
+        "Auth.js · JWT · OAuth",
+        "Zod"
       ]
     },
     {
       "id": 3,
-      "title": "DevOps & Cloud Engineering",
-      "institution": "Online — Argentina",
-      "period": "2024 – Present",
-      "description": "Focused learning in continuous integration, automated deployment, and cloud architecture for modern applications.",
+      "title": "DevOps, Tooling & QA",
+      "institution": "Udemy · Professional Practice · Own Projects",
+      "period": "2023 - Present",
+      "description": "Setting up CI/CD pipelines with GitHub Actions, containerization with Docker and deployments on Vercel and Netlify. Prior experience in remote QA — functional testing, bug reporting and geolocation testing in a professional environment with virtualization tools.",
       "highlights": [
-        "CI/CD Pipelines",
-        "Docker & Containers",
-        "Cloud Deployment",
-        "Monitoring & Performance"
+        "Docker & CI/CD",
+        "GitHub Actions",
+        "Vercel & Netlify",
+        "Vitest & React Testing Library",
+        "Functional Testing & Bug Reporting",
+        "VMware & Linux"
       ]
     },
     {
       "id": 4,
-      "title": "UI/UX Design",
-      "institution": "Online — Argentina",
-      "period": "2021 – 2022",
-      "description": "Study of user-centered design principles, prototyping, and design systems. Proficient in Figma and modern creative tools.",
+      "title": "AI & Design Tools",
+      "institution": "Big School — AI-Driven Development (2026) · Project Practice",
+      "period": "2025 - Present",
+      "description": "Integrating AI models into real development workflows — from API consumption to AI-assisted workflows with Claude Code and Codex. Familiar with Spec-Driven Development and applied Prompt Engineering. I use Figma to work with design systems that I later implement in code.",
       "highlights": [
-        "User Research",
-        "Prototyping",
-        "Design Systems",
-        "Figma, Photoshop & Generative AI"
+        "Gemini API",
+        "Claude Code & Codex",
+        "Prompt Engineering",
+        "Spec-Driven Development",
+        "MCP Protocol",
+        "Figma & Design Systems"
       ]
     }
   ]

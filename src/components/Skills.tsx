@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CloudCog, Code, Layers, Lightbulb, type LucideIcon } from "lucide-react";
+import { CloudCog, Monitor, ServerCog, Sparkles, type LucideIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface Skill {
@@ -12,10 +12,10 @@ interface Skill {
 }
 
 const SKILL_ICONS: Record<number, LucideIcon> = {
-  1: Code,
-  2: Layers,
+  1: Monitor,
+  2: ServerCog,
   3: CloudCog,
-  4: Lightbulb,
+  4: Sparkles,
 };
 
 function Skills() {

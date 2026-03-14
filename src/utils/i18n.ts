@@ -2,22 +2,21 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-import esCommon from '../locales/es/common.json'
-import esPortfolio from '../locales/es/portfolio.json';
-import esSkills from '../locales/es/skills.json';
+import esCommon from "../locales/es/common.json";
+import esPortfolio from "../locales/es/portfolio.json";
+import esSkills from "../locales/es/skills.json";
 
-import enCommon from '../locales/en/common.json'
-import enPortfolio from '../locales/en/portfolio.json';
-import enSkills from '../locales/en/skills.json';
+import enCommon from "../locales/en/common.json";
+import enPortfolio from "../locales/en/portfolio.json";
+import enSkills from "../locales/en/skills.json";
 
-import ptCommon from '../locales/pt/common.json'
-import ptPortfolio from '../locales/pt/portfolio.json';
-import ptSkills from '../locales/pt/skills.json';
-
+import ptCommon from "../locales/pt/common.json";
+import ptPortfolio from "../locales/pt/portfolio.json";
+import ptSkills from "../locales/pt/skills.json";
 
 i18n
   .use(LanguageDetector)
-  .use(initReactI18next) 
+  .use(initReactI18next)
   .init({
     resources: {
       es: {
@@ -36,10 +35,10 @@ i18n
         skills: ptSkills,
       },
     },
-    fallbackLng: "es",
-    lng: "es", 
+    fallbackLng: "en",
+    lng: "en",
     interpolation: {
-      escapeValue: false, 
+      escapeValue: false,
     },
     detection: {
       order: ["localStorage", "navigator"],

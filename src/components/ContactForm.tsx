@@ -157,7 +157,7 @@ function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-serif uppercase text-xs tracking-widest mb-1">
-                        {t("contact.info.phone")}
+                        {t("contact.info.location")}
                       </h4>
                       <p className="font-mono text-sm">Buenos Aires, BA</p>
                     </div>
