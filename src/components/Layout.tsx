@@ -5,6 +5,7 @@ import MyPortfolio from "./MyPortfolio";
 import Skills from "./Skills";
 import AboutMe from "./AboutMe";
 import ContactForm from "./ContactForm";
+import { SpeedDial } from "./SpeedDial";
 
 const Layout = () => {
   return (
@@ -20,6 +21,7 @@ const Layout = () => {
       </main>
 
       <BottomNav />
+      <SpeedDial/>
     </div>
   );
 };
