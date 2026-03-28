@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 import Layout from "./components/Layout";
 import { Analytics } from "@vercel/analytics/react";
 
